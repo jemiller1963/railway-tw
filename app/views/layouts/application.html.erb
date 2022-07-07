@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html class="h-full antialiased">
-  <%= render "shared/head" %>
+<html>
+  <head>
+    <title>RailwayTailwind</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-  <body class="font-sans font-normal leading-normal text-gray-800 bg-white flex flex-col min-h-screen ">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
 
-    <header>
-      <%= render "shared/flash_notice" %>
-      <%= render "shared/navbar" %>
-    </header>
-
-    <main class="flex-grow">
-      <%= content_for?(:content) ? yield(:content) : yield %>
+  <body>
+    <main class="container mx-auto mt-28 px-5 flex">
+      <%= yield %>
     </main>
   </body>
 </html>

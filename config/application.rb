@@ -8,7 +8,6 @@ Bundler.require(*Rails.groups)
 
 module RailwayTailwind
   class Application < Rails::Application
-    config.active_job.queue_adapter = :sidekiq
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
