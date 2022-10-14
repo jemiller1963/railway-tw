@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: railway_tailwind_production
   username: railway_tailwind
   password: <%= ENV["RAILWAY_TAILWIND_DATABASE_PASSWORD"] %>
